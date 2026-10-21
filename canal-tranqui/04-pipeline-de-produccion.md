@@ -24,12 +24,14 @@ Precios obtenidos de las estimaciones reales de tu cuenta de ElevenLabs en octub
 
 | Concepto | Cantidad | Costo aproximado |
 |---|---|---|
-| Imágenes de escena con Nano Banana 2 | 35 escenas con 2 variantes cada una | 8,40 USD |
+| Imágenes de escena con Nano Banana 2 | 35 escenas con 2 variantes cada una. Pide 2, no las 4 que salen por defecto | 8,40 USD |
 | Clips animados con Kling 2.5 Turbo | 8 clips de 5 segundos | 3,40 USD |
 | Voz completa | 9 minutos, 2 tomas | 3 USD |
 | Miniatura con Nano Banana Pro | 4 variantes | 1,50 USD |
 | Efectos de sonido | 5 a 10 efectos | 0,50 USD |
 | **Total por vídeo** | | **unos 17 USD** |
+
+Costo real del piloto: unos 12 USD por 5 minutos, con 17 escenas a 4 variantes y 8 clips. Las variantes extra fueron el gasto más grande.
 
 A 2 vídeos largos por semana son unos 140 USD al mes en créditos.
 Los Shorts salen recortados de los vídeos largos y no suman costo.
@@ -50,7 +52,7 @@ Usa este prompt, pegando antes la biblia del canal completa:
 ```
 Eres el guionista del canal de YouTube "Tranqui". Arriba tienes la biblia del canal.
 Escribe el guion de "¿Qué pasaría si [TEMA]?" siguiendo exactamente la estructura de 7 partes.
-Duración: 8 a 9 minutos, unas 1.100 palabras de narración.
+Duración: 8 a 9 minutos, unas 1.700 palabras de narración.
 Español latino neutro, tratamiento de "tú", sin regionalismos.
 Escribe para curiosos de 12 años en adelante: nunca un tono infantil.
 Incluye 3 caídas de Clementina en los momentos más fuertes.
@@ -128,5 +130,5 @@ Cada Short termina con Tranqui diciendo la pregunta del vídeo largo.
 
 ## Lo que todavía no está automatizado
 
-- **Montaje.** Es el paso que más tiempo lleva, unas 2 a 3 horas por vídeo al principio. ElevenLabs tiene un nodo de composición, pero no aplica zooms sobre imágenes fijas ni subtítulos, así que hoy conviene CapCut.
+- **Montaje.** El piloto se armó de forma automática con los scripts de la carpeta `herramientas`, sin editor. Hacen zooms lentos sobre las imágenes, intercalan los clips, mezclan voz, música y efectos, y agregan los textos. Para cada vídeo nuevo hay que cambiar en los scripts la lista de escenas, los tiempos y los textos. Con CapCut sigue siendo más fácil ajustar a mano, sobre todo los subtítulos.
 - **Verificación de datos.** No se automatiza a propósito. Es tu valor añadido y tu seguro contra la desmonetización.

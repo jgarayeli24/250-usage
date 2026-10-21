@@ -14,6 +14,8 @@ Canal en español latino neutro, para curiosos de 12 años en adelante, producid
 | `03-guion-piloto.md` | Guion completo del primer vídeo con la tabla de datos verificables |
 | `04-pipeline-de-produccion.md` | Herramientas, prompts, costos y el paso a paso de cada vídeo |
 | `assets/` | Hoja maestra del personaje, avatar, banner, miniatura, fotograma, clip animado, voz y música |
+| `piloto/` | **El primer vídeo terminado**, más las escenas, clips y voces usadas para armarlo |
+| `herramientas/` | Scripts de ffmpeg que arman el vídeo automáticamente a partir de imágenes, clips y voces |
 
 ## Assets generados
 
@@ -30,10 +32,27 @@ Canal en español latino neutro, para curiosos de 12 años en adelante, producid
 
 Todo está también en el lienzo de ElevenLabs llamado "Canal Qué pasaría si - Personajes", donde se puede seguir generando.
 
-## Pendiente antes de seguir
+## El piloto
 
-- **Créditos de ElevenLabs agotados.** La cuarta variante de la música falló por falta de saldo. Hace falta recargar o subir de plan antes de producir el piloto completo. El costo por vídeo está en el documento del pipeline.
-- **Revisar la música.** Las tres pistas se generaron sin el modo instrumental activado. Si alguna trae voz, descártala.
+`piloto/piloto-tierra-deja-de-girar.mp4` es el primer vídeo completo, listo para revisar.
+
+| Dato | Valor |
+|---|---|
+| Duración | 5 min 10 s |
+| Resolución | 1280×720 |
+| Volumen | -15 LUFS, el estándar de YouTube |
+| Imágenes de escena | 17 |
+| Planos animados | 8 |
+| Costo en créditos | unos 12 USD |
+
+Incluye voz, música, efectos, textos con los datos y el contador de Clementinas.
+
+## Pendiente antes de publicar
+
+- **Duración.** El guion dio 5 minutos con esta voz, no los 8 a 9 previstos. Con menos de 8 minutos YouTube no permite anuncios a mitad del vídeo. Los próximos guiones deben tener unas 1.700 palabras.
+- **Música.** El piloto usa la opción 1. Escucha las tres y cámbiala si alguna te gusta más o si trae voz.
+- **Subtítulos.** No están grabados en el vídeo. Activa los automáticos de YouTube en español y revísalos.
+- **Escucha completa.** Revisa que la voz pronuncie bien números y nombres antes de subirlo.
 
 ## Próximos pasos
 

@@ -1,7 +1,7 @@
 # Guion piloto: ¿Qué pasaría si la Tierra dejara de girar?
 
 - **Duración objetivo:** 8 a 9 minutos.
-- **Narración:** unas 1.100 palabras, ritmo pausado con silencios cómicos.
+- **Narración:** unas 1.100 palabras, ritmo pausado con silencios cómicos. Con la voz elegida dio 5 minutos y 10 segundos, no 8. Ver el README.
 - **Personajes:** Tranqui (narrador) y Clementina (la mandarina, no habla).
 - **Recurso recurrente:** contador en pantalla de "Clementinas caídas". Pide al público que cuente y comente.
 
