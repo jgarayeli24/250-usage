@@ -604,6 +604,17 @@ footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-betwe
   .offer-top { grid-template-columns: 96px 1fr; }
   .offer-img { width: 96px; height: 96px; }
 }
+
+/* Kit con toalla */
+.b-img { position: relative; }
+.b-img img.wide { width: 78px; object-fit: contain; }
+.b-img .x2 { position: absolute; right: -6px; top: -8px; background: var(--ink); color: #fff; font-size: .72rem; font-weight: 800; line-height: 1; padding: 4px 6px; border-radius: 999px; }
+.bump { grid-template-columns: auto auto 1fr auto; }
+.bump-img { display: block; width: 46px; height: 46px; border-radius: 10px; overflow: hidden; background: #fff; }
+.bump-img img { display: block; width: 100%; height: 100%; object-fit: cover; mix-blend-mode: multiply; }
+.tilt img.kit-img { clip-path: none; mix-blend-mode: normal; filter: drop-shadow(0 18px 22px rgba(11, 61, 110, .18)); }
+.cup-stage:has(.kit-img) .cshadow { display: none; }
+@media (max-width: 560px) { .b-img img.wide { width: 60px; } .bump-img { width: 40px; height: 40px; } }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -664,10 +675,10 @@ footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-betwe
         </div>
         <div class="thumbs" id="thumbs">
           <button type="button" aria-current="true" data-src="img/vaso-golden.jpg" data-alt="Limpiador de patas en uso con un golden retriever, en la entrada de una casa" aria-label="Ver foto 1"><img src="img/vaso-golden.jpg" alt="" loading="lazy"></button>
-          <button type="button" data-src="img/vaso-beneficios.jpg" data-alt="Beneficios: eléctrico con un botón, 2 velocidades, cerdas de silicona, limpia 360 grados" aria-label="Ver foto 2"><img src="img/vaso-beneficios.jpg" alt="" loading="lazy"></button>
-          <button type="button" data-src="img/vaso-cerdas.jpg" data-alt="Vista desde arriba de las cerdas de silicona" aria-label="Ver foto 3"><img src="img/vaso-cerdas.jpg" alt="" loading="lazy"></button>
-          <button type="button" data-src="img/vaso-frente.jpg" data-alt="Limpiador de patas azul de frente, con el botón de encendido" aria-label="Ver foto 4"><img src="img/vaso-frente.jpg" alt="" loading="lazy"></button>
-          <button type="button" data-src="img/vaso-gris.jpg" data-alt="Limpiador de patas azul sobre fondo gris claro" aria-label="Ver foto 5"><img src="img/vaso-gris.jpg" alt="" loading="lazy"></button>
+          <button type="button" data-src="img/kit-toalla.jpg" data-alt="El kit: limpiador de patas celeste y toalla de microfibra azul doblada" aria-label="Ver foto 2"><img src="img/kit-toalla.jpg" alt="" loading="lazy"></button>
+          <button type="button" data-src="img/vaso-beneficios.jpg" data-alt="Beneficios: eléctrico con un botón, 2 velocidades, cerdas de silicona, limpia 360 grados" aria-label="Ver foto 3"><img src="img/vaso-beneficios.jpg" alt="" loading="lazy"></button>
+          <button type="button" data-src="img/vaso-cerdas.jpg" data-alt="Vista desde arriba de las cerdas de silicona" aria-label="Ver foto 4"><img src="img/vaso-cerdas.jpg" alt="" loading="lazy"></button>
+          <button type="button" data-src="img/vaso-frente.jpg" data-alt="Limpiador de patas azul de frente, con el botón de encendido" aria-label="Ver foto 5"><img src="img/vaso-frente.jpg" alt="" loading="lazy"></button>
         </div>
       </div>
 
@@ -683,14 +694,14 @@ footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-betwe
           <legend>Elegí tu kit</legend>
           <label class="bundle">
             <input type="radio" name="bundle" id="b-kit1" value="kit1" checked>
-            <span class="b-img" aria-hidden="true"><img src="img/vaso-frente.jpg" alt="" width="1000" height="1000"></span>
+            <span class="b-img" aria-hidden="true"><img class="wide" src="img/kit-toalla-tira.jpg" alt="" width="360" height="239"></span>
             <span class="b-name"><strong>Kit Patas Limpias</strong><small>Limpiador + toalla de microfibra + guía</small></span>
             <span class="b-price"><span class="price">$ 47.999</span><small class="price">3 × $ 16.000</small></span>
           </label>
           <label class="bundle bundle--tagged">
             <span class="tag">Para 2 perros o regalo</span>
             <input type="radio" name="bundle" id="b-kit2" value="kit2">
-            <span class="b-img" aria-hidden="true"><img src="img/vaso-frente.jpg" alt="" width="1000" height="1000"><img src="img/vaso-frente.jpg" alt="" width="1000" height="1000"></span>
+            <span class="b-img" aria-hidden="true"><img class="wide" src="img/kit-toalla-tira.jpg" alt="" width="360" height="239"><span class="x2">×2</span></span>
             <span class="b-name"><strong>Kit doble</strong><small>2 limpiadores + 2 toallas + guía</small></span>
             <span class="b-price"><span class="price">$ 84.999</span><small class="price">3 × $ 28.333</small><span class="save">Ahorrás $ 10.999</span></span>
           </label>
@@ -698,6 +709,7 @@ footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-betwe
 
         <label class="bump">
           <input type="checkbox" id="bump-towel">
+          <span class="bump-img" aria-hidden="true"><img src="img/toalla.jpg" alt="" width="600" height="600"></span>
           <span><strong>Sumá una toalla extra</strong><small>Una en la puerta y otra en el auto</small></span>
           <span class="price">+ $ 6.999</span>
         </label>
@@ -829,7 +841,7 @@ footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-betwe
         <h2>Todo lo que necesitás en la puerta de casa.</h2>
       </div>
       <div class="kit-show">
-        <div class="cup-stage" aria-hidden="true"><div class="tilt"><span class="disc"></span><img src="img/vaso-frente.jpg" alt="" loading="lazy" width="1000" height="1000"><span class="cshadow"></span></div></div>
+        <div class="cup-stage" aria-hidden="true"><div class="tilt"><span class="disc"></span><img class="kit-img" src="img/kit-toalla-stage.webp" alt="" loading="lazy" width="800" height="800"><span class="cshadow"></span></div></div>
         <div class="kit-copy">
           <ul class="kit-list">
             <li><span class="ico"><svg aria-hidden="true"><use href="#i-cup"/></svg></span><div><h3>Limpiador eléctrico</h3><p>El vaso con motor, cerdas de silicona y dos velocidades.</p></div></li>
@@ -924,7 +936,7 @@ footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-betwe
       </div>
       <div class="offer">
         <div class="offer-top">
-          <span class="offer-img"><img src="img/vaso-frente.jpg" alt="" loading="lazy" width="1000" height="1000"></span>
+          <span class="offer-img"><img src="img/kit-toalla.jpg" alt="" loading="lazy" width="1000" height="1000"></span>
           <div><b id="final-name">Kit Patas Limpias</b><span class="price" id="final-price">$ 47.999</span></div>
         </div>
         <p class="cuotas">3 cuotas sin interés de <b class="price" id="final-cuota">$ 16.000</b> · Envío gratis</p>
@@ -1018,9 +1030,9 @@ footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-betwe
   var WHATSAPP = "";
 
   var PRODUCTS = {
-    kit1:   { name: "Kit Patas Limpias", detail: "Limpiador + toalla + guía", price: 47999, img: "img/vaso-frente.jpg", kit: true },
-    kit2:   { name: "Kit doble", detail: "2 limpiadores + 2 toallas + guía", price: 84999, img: "img/vaso-gris.jpg", kit: true },
-    toalla: { name: "Toalla de microfibra extra", detail: "Para la puerta o el auto", price: 6999, img: null, kit: false }
+    kit1:   { name: "Kit Patas Limpias", detail: "Limpiador + toalla + guía", price: 47999, img: "img/kit-toalla.jpg", kit: true },
+    kit2:   { name: "Kit doble", detail: "2 limpiadores + 2 toallas + guía", price: 84999, img: "img/kit-toalla.jpg", kit: true },
+    toalla: { name: "Toalla de microfibra extra", detail: "Para la puerta o el auto", price: 6999, img: "img/toalla.jpg", kit: false }
   };
   var ORDER = ["kit1", "kit2", "toalla"];
   var STORE_KEY = "patas-limpias-cart";
