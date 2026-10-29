@@ -138,7 +138,7 @@ header.site .wrap { display: flex; align-items: center; justify-content: space-b
 .gallery-main[data-img*="beneficios"] .stickers { display: none; }
 .st { display: inline-block; }
 .st-lime { background: var(--ball); color: #13212C; font: 800 .95rem/1 var(--font-display); padding: 9px 13px; border-radius: 14px; border: 3px solid #fff; box-shadow: 0 6px 14px rgba(19, 33, 44, .18); transform: rotate(6deg); }
-.st-round { width: 74px; height: 74px; border-radius: 50%; display: grid; place-content: center; text-align: center; background-color: var(--blue); background-image: var(--ribs); color: #fff; border: 3px solid #fff; box-shadow: 0 6px 14px rgba(19, 33, 44, .2); font: 800 .66rem/1.05 var(--font-display); letter-spacing: .01em; transform: rotate(-8deg); margin-right: 6px; }
+.st-round { width: 78px; height: 78px; border-radius: 50%; display: grid; place-content: center; text-align: center; background-color: var(--blue); background-image: var(--ribs); color: #fff; border: 3px solid #fff; box-shadow: 0 6px 14px rgba(19, 33, 44, .2); font: 800 .6rem/1.05 var(--font-display); letter-spacing: 0; transform: rotate(-8deg); margin-right: 6px; }
 .st-round b { display: block; font-size: 1.5rem; line-height: .95; }
 .thumbs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
 .thumbs button { padding: 0; border: 2px solid transparent; border-radius: 10px; overflow: hidden; background: var(--surface); aspect-ratio: 1 / 1; transition: transform .2s ease, border-color .2s ease; }
@@ -164,6 +164,7 @@ h1 .w { display: inline-block; }
 .bundle:has(input:checked) { border-color: var(--blue); background: var(--sky); transform: translateY(-2px); box-shadow: 0 14px 28px -16px rgba(21, 105, 184, .6); }
 .bundle:has(input:focus-visible), .bump:has(input:focus-visible) { outline: 3px solid var(--blue); outline-offset: 3px; }
 @supports selector(:has(*)) { .bundle input:focus-visible, .bump input:focus-visible { outline: none; } }
+.bundle--tagged { padding-top: 22px; }
 .bundle input { width: 20px; height: 20px; accent-color: var(--blue); margin: 0; }
 .b-img { display: flex; justify-content: center; align-items: flex-end; height: 52px; }
 .b-img img { display: block; height: 52px; width: 32px; object-fit: cover; mix-blend-mode: multiply; }
@@ -202,7 +203,7 @@ section.block.pt-0 { padding-top: 0; }
 .section-head p { color: var(--muted); font-size: 1.1rem; }
 
 /* ---------- Barro: "La cuenta que nadie hace" ---------- */
-.mud {
+.block.mud {
   position: relative; overflow-x: clip; color: var(--mud-ink);
   padding-bottom: calc(var(--pad) + 88px);
   background-color: #4E3725;
@@ -223,7 +224,7 @@ section.block.pt-0 { padding-top: 0; }
 .counter > div { border-top: 2px solid rgba(245, 237, 228, 0.25); padding-top: 14px; }
 .counter .n { font-family: var(--font-display); font-weight: 800; font-size: clamp(3rem, 7vw, 4.8rem); line-height: 1; font-variant-numeric: tabular-nums; min-width: calc(var(--ch, 2) * 1ch); }
 .counter > div:last-child .n { font-size: clamp(3.6rem, 9vw, 6.4rem); }
-.counter .u { color: #D9C7B5; font-weight: 600; }
+.counter .u { display: block; margin-top: 10px; color: #D9C7B5; font-weight: 600; white-space: nowrap; }
 .math { display: block; width: fit-content; font-family: var(--font-hand); font-weight: 600; color: #E6D3BF; font-size: 1.05rem; transform: rotate(-3deg); margin-top: 6px; }
 .pains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
 .pain { background: rgba(245, 237, 228, 0.07); border: 1px solid rgba(245, 237, 228, .14); border-radius: var(--radius); padding: 20px; display: grid; gap: 8px; align-content: start; transition: transform .25s var(--ease-out), border-color .25s ease; }
@@ -243,7 +244,7 @@ section.block.pt-0 { padding-top: 0; }
 .drips-svg .drip, .drips-svg .drop { transform-box: fill-box; transform-origin: 50% 0; }
 
 /* ---------- Cómo se usa ---------- */
-#como { position: relative; padding-top: calc(var(--pad) + clamp(28px, 4vw, 56px) + 24px); padding-bottom: calc(var(--pad) + clamp(40px, 5vw, 72px)); }
+section#como { position: relative; padding-top: calc(var(--pad) + clamp(28px, 4vw, 56px) + 24px); padding-bottom: calc(var(--pad) + clamp(40px, 5vw, 72px)); }
 #como > .wrap { position: relative; z-index: 1; }
 .water-line { position: absolute; left: 0; right: 0; top: calc(clamp(28px, 4vw, 56px) - 12px); width: 100%; height: 22px; display: block; pointer-events: none; }
 .water-line path { fill: none; stroke: var(--blue-500); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 1; vector-effect: non-scaling-stroke; }
@@ -326,7 +327,7 @@ section.block.pt-0 { padding-top: 0; }
 .kit-sum b { color: var(--blue); }
 
 /* ---------- Comparación ---------- */
-.compare-sec { padding-top: calc(var(--pad) + clamp(28px, 4vw, 56px)) !important; }
+.block.compare-sec { padding-top: calc(var(--pad) + clamp(28px, 4vw, 56px)); }
 .table-scroll { overflow-x: auto; background: transparent; border: 0; }
 table.compare { width: 100%; min-width: 560px; border-collapse: separate; border-spacing: 0; }
 .compare th, .compare td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
@@ -383,7 +384,8 @@ table.compare { width: 100%; min-width: 560px; border-collapse: separate; border
 .final-copy p { color: #B8C4CD; font-size: 1.1rem; max-width: 44ch; margin-top: 20px; }
 .offer { background: #fff; color: var(--ink); border-radius: 20px; padding: 20px; box-shadow: var(--shadow-float); display: grid; gap: 14px; }
 .offer-top { display: grid; grid-template-columns: 120px 1fr; gap: 14px; align-items: center; }
-.offer-top img { display: block; width: 120px; height: 120px; object-fit: cover; mix-blend-mode: multiply; }
+.offer-img { display: block; width: 120px; height: 120px; border-radius: 18px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #fff 0 32%, #E2F0FA 72%); }
+.offer-img img { display: block; width: 100%; height: 100%; object-fit: cover; mix-blend-mode: multiply; }
 .offer-top b { display: block; font-family: var(--font-display); font-size: 1.2rem; line-height: 1.15; }
 .offer-top .price { display: block; margin-top: 6px; font-size: 1.6rem; font-weight: 800; }
 .offer .cuotas { text-align: left; }
@@ -576,13 +578,14 @@ footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-betwe
   .b-img img { height: 40px; width: 25px; }
   .b-img img + img { margin-left: -10px; }
   #add-main { padding-inline: 14px; gap: 8px; font-size: 1.05rem; }
-  .mud { padding-bottom: calc(var(--pad) + 64px); }
+  .block.mud { padding-bottom: calc(var(--pad) + 64px); }
   .trail--mud { height: 110px; }
   .trail svg { width: 22px; height: 22px; }
   .trail--mud svg:nth-child(2), .trail--mud svg:nth-child(4), .trail--mud svg:nth-child(6) { display: none; }
   .splat--b { bottom: 120px; }
   .counter { grid-template-columns: 1fr; gap: 10px; }
   .counter > div { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 12px; }
+  .counter .u { margin-top: 0; }
   .counter .math { flex-basis: 100%; margin-top: 2px; }
   .table-scroll { overflow: visible; }
   table.compare { min-width: 0; }
@@ -599,7 +602,7 @@ footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-betwe
   .return-steps li + li::before { left: 50%; top: -19px; margin: 0 0 0 -8px; transform: rotate(90deg); }
   .final .cta { width: 100%; }
   .offer-top { grid-template-columns: 96px 1fr; }
-  .offer-top img { width: 96px; height: 96px; }
+  .offer-img { width: 96px; height: 96px; }
 }
 </style>
 
@@ -684,7 +687,7 @@ footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-betwe
             <span class="b-name"><strong>Kit Patas Limpias</strong><small>Limpiador + toalla de microfibra + guía</small></span>
             <span class="b-price"><span class="price">$ 47.999</span><small class="price">3 × $ 16.000</small></span>
           </label>
-          <label class="bundle">
+          <label class="bundle bundle--tagged">
             <span class="tag">Para 2 perros o regalo</span>
             <input type="radio" name="bundle" id="b-kit2" value="kit2">
             <span class="b-img" aria-hidden="true"><img src="img/vaso-frente.jpg" alt="" width="1000" height="1000"><img src="img/vaso-frente.jpg" alt="" width="1000" height="1000"></span>
@@ -726,7 +729,7 @@ footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-betwe
       <div class="counter">
         <div><span class="sr-only">12 patas por día</span><span class="n x3d x3d--clay" aria-hidden="true" style="--ch:2">12</span> <span class="u" aria-hidden="true">patas por día</span><span class="math" aria-hidden="true">4 patas × 3 paseos</span></div>
         <div><span class="sr-only">84 patas por semana</span><span class="n x3d x3d--clay" aria-hidden="true" style="--ch:2">84</span> <span class="u" aria-hidden="true">por semana</span><span class="math" aria-hidden="true">12 × 7 días</span></div>
-        <div><span class="sr-only">4.380 patas por año</span><span class="n x3d x3d--clay" aria-hidden="true" style="--ch:5">4.380</span> <span class="u" aria-hidden="true">por año</span><span class="math" aria-hidden="true">12 × 365 días</span></div>
+        <div><span class="sr-only">4.380 patas por año</span><span class="n x3d x3d--clay" aria-hidden="true" style="--ch:4.3">4.380</span> <span class="u" aria-hidden="true">por año</span><span class="math" aria-hidden="true">12 × 365 días</span></div>
       </div>
       <div class="pains">
         <div class="pain"><svg class="pain-ico" aria-hidden="true"><use href="#i-door"/></svg><h3>El operativo de la puerta</h3><p>Atajarlo, agarrar la toalla, que se escape mojado y se sacuda en el living. Con un perro grande es una pelea.</p></div>
@@ -921,7 +924,7 @@ footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-betwe
       </div>
       <div class="offer">
         <div class="offer-top">
-          <img src="img/vaso-frente.jpg" alt="" loading="lazy" width="1000" height="1000">
+          <span class="offer-img"><img src="img/vaso-frente.jpg" alt="" loading="lazy" width="1000" height="1000"></span>
           <div><b id="final-name">Kit Patas Limpias</b><span class="price" id="final-price">$ 47.999</span></div>
         </div>
         <p class="cuotas">3 cuotas sin interés de <b class="price" id="final-cuota">$ 16.000</b> · Envío gratis</p>
